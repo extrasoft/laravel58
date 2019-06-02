@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Contact Us</a>
+      <a class="nav-item nav-link" href="{{ route('contact.create')}}">Contact Us</a>
       <a class="nav-item nav-link" href="#">About Us</a>
       <a class="nav-item nav-link" href="{{ route('customer.index') }}">Customer List</a>
     </div>

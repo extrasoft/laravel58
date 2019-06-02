@@ -69,7 +69,17 @@
   <body>
     @include('nav')
     <div class="container mt-3">
+      @if(session()->has('message'))
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Success</h4>
+          <hr/>
+          <p>{{ session()->get('message') }}</p>
+        </div>
+      @endif
+
       @yield('content')
+
+      
     </div>
 
     <!-- Optional JavaScript -->
