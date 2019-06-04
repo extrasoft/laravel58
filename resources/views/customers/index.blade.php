@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('title','Customers')
 
 @section('content')
@@ -47,7 +47,7 @@
               <form action="{{ route('customer.destroy', ['customer'=>$customer->id ]) }}" method="POST">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-sm btn-no-padding">
+                <button type="submit" class="btn btn-sm btn-link btn-no-padding">
                   <i class="material-icons md-dark">delete</i>
                 </button>
               </form>

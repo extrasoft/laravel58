@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+    public function __construct()
+    {
+        // ต้องผ่าน auth ทุก method
+        // $this->middleware('auth');
+
+        // ต้องผ่าน auth เฉพาะ method index
+        // $this->middleware('auth')->only('index');
+
+        // ต้องผ่าน auth ยกเว้น method index
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *

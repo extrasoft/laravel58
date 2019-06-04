@@ -1,15 +1,16 @@
-@extends('layout')
+@extends('layouts.app')
 @section('title','Contact')
 
 @section('content')
-<div class="row">
-  <div class="col-12 d-flex">
-      <i class="material-icons md-36">perm_contact_calendar</i>
-      <h4 class="ml-2">Contact Form</h4>
-  </div>
-</div>
-<hr/>
+
 @if( !session()->has('message') )
+  <div class="row">
+    <div class="col-12 d-flex">
+        <i class="material-icons md-36">perm_contact_calendar</i>
+        <h4 class="ml-2">Contact Form</h4>
+    </div>
+  </div>
+  <hr/>
   <div class="row">
     <div class="col">
     <form action="{{ route('contact.store') }}" method="POST">
